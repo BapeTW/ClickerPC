@@ -2,7 +2,7 @@
 function drawMainMenu() {
 	// Background
 	image(mainbg.img, 0, 0);
-	
+
 	// Top Header Text + Box
 	noStroke();
 	fill(10, 100, 15);
@@ -16,7 +16,7 @@ function drawMainMenu() {
 	text("PC Part Clicker", 300, 98);
 	fill(220);
 	text("PC Part Clicker", 302, 100);
-	
+
 	// Main Menu Play Button
 	fill(playBox1Col);
 	rect(189, 340, 220, 120, 35);
@@ -24,9 +24,19 @@ function drawMainMenu() {
 	rect(200, 350, 200, 100, 35);
 	fill(255);
 	text("PLAY", 300, 420);
-	
+
 	if (mouseX > 190 && mouseY > 340 && mouseX < 409 && mouseY < 460 && mouseIsPressed) {
 		playBox2Col = 150;
+	} else if (playBox2Col === 150) {
+		gameState = "gameStart";
 	}
-	
+}
+
+function drawUI() {
+	noStroke();
+	background(10);
+	fill(30);
+	rect(0, 0, width, 100);
+	fill(80);
+	rect(10, 10, 350, 80);
 }

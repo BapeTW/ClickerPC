@@ -8,7 +8,7 @@ function setup() {
 	var x = (windowWidth - width) / 2;
 	var y = (windowHeight - height) / 2;
 	cnv.position(x, y);
-	gameState = "mainMenu";
+	gameState = "gameStart";
 	playBox1Col = 255;
 	playBox2Col = 20;
 }
@@ -16,6 +16,8 @@ function setup() {
 function draw() {
 	if (gameState === "mainMenu") {
 		drawMainMenu();
+	} else if (gameState === "gameStart") {
+		drawUI();
 	}
 }
 
