@@ -33,10 +33,34 @@ function drawMainMenu() {
 }
 
 function drawUI() {
+	//Main Background Draw
 	noStroke();
-	background(10);
+	background(141, 94, 54);
+	
+	//Header Background
 	fill(30);
 	rect(0, 0, width, 100);
+	
+	//Header PartsCounter Background
 	fill(80);
 	rect(10, 10, 350, 80);
+	
+	//"parts:" text
+	textAlign(LEFT);
+	textFont("Arial");
+	fill(255);
+	textSize(30);
+	text("Parts:", 15, 38);
+	
+	//partsTotal background
+	fill(111, 64, 0);
+	rect(13, 50, 344, 36);
+	
+	//partsTotal counter
+	fill(255);
+	text("partsTotal", 15, 77);
+	
+	//upgrades Bg1 + Bg2
+	fill(80);
+	rect(370, 10, 222, 80);
 }
