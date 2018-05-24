@@ -1,8 +1,11 @@
+//Declare Global Vars
 var mainbg = {};
 var mainClickImages = {};
 var gameState;
 var playBox1Col;
 var playBox2Col;
+var upgradeBoxCol;
+var isUpgradeGuiOpen;
 
 function setup() {
 	var cnv = createCanvas(600, 800);
@@ -12,6 +15,8 @@ function setup() {
 	gameState = "mainMenu";
 	playBox1Col = 255;
 	playBox2Col = 20;
+	upgradeBoxCol = 90;
+	isUpgradeGuiOpen = false;
 }
 
 function draw() {
@@ -26,11 +31,11 @@ function preload() {
 	mainbg.img = loadImage("images/mainbg.jpg");
 	
 	
-	//ADD THESE IN LATER ADD THESE IN LATER ADD THESE IN LATER ADD THESE IN LATER ADD THESE IN LATER ADD THESE IN LATER ADD THESE IN LATER 
-//	mainClickImages.img1 = loadImage("images/1700k");
-//	mainCLickImages.img2 = loadImage("images/gtx1080");
-//	mainClickImages.img3 = loadImage("images/h110m");
-//	mainClickImages.img4 = loadImage("images/tridentz");
-//	mainClickImages.img5 = loadImage("images/1000w");
-//	mainClickImages.img6 = loadImage("images/nzxtcase");
+	// Load Click Images
+	mainClickImages.img1 = loadImage("images/1700k.png");
+	mainClickImages.img2 = loadImage("images/gtx1080.png");
+	mainClickImages.img3 = loadImage("images/h110m.png");
+	mainClickImages.img4 = loadImage("images/tridentz.png");
+	mainClickImages.img5 = loadImage("images/1000w.png");
+	mainClickImages.img6 = loadImage("images/nzxt.png");
 }
